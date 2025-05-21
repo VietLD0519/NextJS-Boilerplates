@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import ThemeRegistry from '@/providers/ThemeRegistry';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 import { AuthProvider } from '@/contexts/AuthContext';
 
 export const metadata: Metadata = {
-  title: 'Trang Quản Trị',
-  description: 'Next.js Admin Dashboard với MUI và Clean Architecture',
+  title: 'Admin Dashboard',
+  description: 'Next.js Admin Dashboard with MUI and Clean Architecture',
 };
 
 export default function RootLayout({
@@ -15,11 +15,11 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body>
-        <ThemeRegistry>
+        <ThemeProvider>
           <AuthProvider>
             {children}
           </AuthProvider>
-        </ThemeRegistry>
+        </ThemeProvider>
       </body>
     </html>
   );
