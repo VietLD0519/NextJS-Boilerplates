@@ -8,3 +8,4 @@ cd nextjs-mui-clean
 npm install @mui/material @mui/icons-material @emotion/react @emotion/styled
 npm install react-hook-form @hookform/resolvers zod
 npm install zustand axios jwt-decode
+npm install recharts @mui/x-data-grid date-fns
